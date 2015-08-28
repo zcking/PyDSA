@@ -6,6 +6,7 @@ Most of them have been modified to an extent, and a couple may not be completely
 "interfaces" implemented to better utilize the heirarchial approach of object-orientation.
 
 ## Heirarchy of Data Structures
+```
 AbstractCollection
 |
 |---->AbstractBag
@@ -62,3 +63,4 @@ AbstractCollection
 |---->HeapPriorityQueue
 |---->LinkedBST
 |---->LinkedDirectedGraph
+```
