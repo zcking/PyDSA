@@ -5,6 +5,20 @@ These implementations are based off of those written by Ken Lambert in his book,
 Most of them have been modified to an extent, and a couple may not be completely functional. There are also
 "interfaces" implemented to better utilize the heirarchial approach of object-orientation.
 
+## Help with Individual Data Structures
+To get help with individual data structures, their methods, complexity analysis, etc. please use the docstrings. An example would be as follows:
+```python
+import ArrayBag
+
+print(help(ArrayBag))
+```
+or
+```python
+import ArrayBag
+
+print(ArrayBag.__doc__)
+```
+
 ## Heirarchy of Data Structures
 ```
 AbstractCollection
