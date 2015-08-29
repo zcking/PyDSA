@@ -8,14 +8,20 @@ A module that defines some sorting algorithms
 from arrays import Array
 
 def swap(lyst, i, j):
-    """Exchanges the items at positions i and j."""
+    """
+    Exchanges the items at positions i and j.
+    """
     temp = lyst[i]
     lyst[i] = lyst[j]
     lyst[j] = temp
 
 def selectionSort(lyst):
-    """Selection sort sorts a list with a complexity
-    analysis of O(n^2) in all cases."""
+    """
+    Complexity Analysis:
+    Best Case: O(n^2)
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
+    """
     i = 0
     while i < len(lyst) - 1:            # Do n - 1 searches
         minIndex = i                    # for the smallest
@@ -29,8 +35,12 @@ def selectionSort(lyst):
         i += 1
 
 def bubbleSort(lyst):
-    """Bubble sort sorts a list with a complexity
-    analysis of O(n^2) in the average case."""
+    """
+    Complexity Analysis:
+    Best Case: O(n)
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
+    """
     n = len(lyst)
     while n > 1:                        # Do n - 1 bubbles
         swapped = False
@@ -44,8 +54,12 @@ def bubbleSort(lyst):
         n -= 1
 
 def insertionSort(lyst):
-    """Insertion sort sorts a list with a complexity
-    analysis of O(n^2) in the worst case."""
+    """
+    Complexity Analysis:
+    Best Case: O(n)
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
+    """
     i = 1
     while i < len(lyst):
         itemToInsert = lyst[i]
@@ -60,8 +74,12 @@ def insertionSort(lyst):
         i += 1
 
 def quicksort(lyst):
-    """Quick sort sorts a list with a complexity
-    analysis of O(nlog(n)) in best case."""
+    """
+    Complexity Analysis:
+    Best Case: O(nlogn)
+    Average Case: O(nlogn)
+    Worst Case: O(n^2)
+    """
     _quicksortHelper(lyst, 0, len(lyst) - 1)
 
 def _quicksortHelper(lyst, left, right):
@@ -88,6 +106,12 @@ def _partition(lyst, left, right):
     return boundary
 
 def mergeSort(lyst):
+    """
+    Complexity Analysis:
+    Best Case: O(nlogn)
+    Average Case: O(nlogn)
+    Worst Case: O(nlogn)
+    """
     # lyst          list being sorted
     # copyBuffer    temporary space needed during merge
     copyBuffer = Array(len(lyst))
