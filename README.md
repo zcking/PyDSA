@@ -1,4 +1,4 @@
-# Python-Data-Structures
+# PyDSA: Python Data Structures & Algorithms
 Simple data structures and algorithms implemented in Python 3.
 
 These implementations are based off of those written by Ken Lambert in his book, "Fundamental of Python: Data Structures."
