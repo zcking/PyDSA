@@ -1,6 +1,7 @@
 """
 File: abstractcollection.py
 Author: Zachary King
+Credit: Ken Lambert
 """
 
 class AbstractCollection(object):

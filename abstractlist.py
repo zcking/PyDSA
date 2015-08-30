@@ -1,6 +1,7 @@
 """
 File: abstractlist.py
 Author: Zachary King
+Credit: Ken Lambert
 """
 
 from abstractcollection import AbstractCollection

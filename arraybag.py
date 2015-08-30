@@ -1,6 +1,7 @@
 """
 File: arraybag.py
 Author: Zachary King
+Credit: Ken Lambert
 """
 
 from arrays import Array
