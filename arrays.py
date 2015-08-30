@@ -1,8 +1,7 @@
 """
 File: array.py
-Project 4.5
-
-Adds the __eq__ method.
+Author: Zachary King
+Credit: Ken Lambert
 
 An Array is a restricted list whose clients can use
 only [], len, iter, and str.
@@ -25,6 +24,8 @@ class Array(object):
         # Track the capacity and fill value for adjustments later
         self._capacity = capacity
         self._fillValue = fillValue
+        if fillValue is not None:
+            self._logicalSize = capacity
         for count in range(capacity):
             self._items.append(fillValue)
 
@@ -73,7 +74,7 @@ class Array(object):
         # Shrink the size by half but not below the default capacity
         # and remove those garbage cells from the underlying list
         newSize = max(self._capacity, len(self) // 2)
-        for count in range(len(self) - newSize):   
+        for count in range(len(self) - newSize):
             self._items.pop()
 
     def insert(self, index, newItem):
@@ -85,11 +86,11 @@ class Array(object):
         else:
             index = max(index, 0)
             # Shift items down by one position
-            for i in range(self.size(), index, -1):      
+            for i in range(self.size(), index, -1):
                 self._items[i] = self._items[i - 1]
 
-            # Add new item and increment logical size                       
-            self._items[index] = newItem 
+            # Add new item and increment logical size
+            self._items[index] = newItem
         self._logicalSize += 1
 
     def pop(self, index=None):
@@ -101,7 +102,7 @@ class Array(object):
             raise IndexError("Array index out of bounds")
         itemToReturn = self._items[index]
         # Shift items up by one position
-        for i in range(index, self.size() - 1):       
+        for i in range(index, self.size() - 1):
             self._items[i] = self._items[i + 1]
         # Reset empty slot to fill value
         self._items[self.size() - 1] = self._fillValue
