@@ -112,48 +112,36 @@ def mergeSort(lyst):
     Average Case: O(nlogn)
     Worst Case: O(nlogn)
     """
-    # lyst          list being sorted
-    # copyBuffer    temporary space needed during merge
-    copyBuffer = Array(len(lyst))
-    _mergeSortHelper(lyst, copyBuffer, 0, len(lyst) - 1)
+    _mergeSort(lyst, 0, len(lyst) - 1)
 
-def _mergeSortHelper(lyst, copyBuffer, low, high):
-    # lyst          list being sorted
-    # copyBuffer    temp space for merging
-    # low, high     bounds of sublist
-    # middle        midpoint of sublist
-    if low < high:
-        middle = (low + high) // 2
-        _mergeSortHelper(lyst, copyBuffer, low, middle)
-        _mergeSortHelper(lyst, copyBuffer, middle + 1, high)
-        _merge(lyst, copyBuffer, low, middle, high)
+def _mergeSort(lyst, first, last):
+    # Break problem into smaller structurally identical pieces
+    mid = (first + last) // 2
+    if first < last:
+        _mergeSort(lyst, first, mid)
+        _mergeSort(lyst, mid + 1, last)
 
-def _merge(lyst, copyBuffer, low, middle, high):
-    # lyst          list that is being sorted
-    # copyBuffer    temp space for merging
-    # low           beginning of first sorted sublist
-    # middle        end of first sorted sublist
-    # middle + 1    beginning of second sorted sublist
-    # high          end of second sorted sublist
+    # Merge solved pieces to get solution to original problem
+    a, f, l = 0, first, mid + 1
+    tmp = [None] * (last - first + 1)
 
-    # Initialize i1 and i2 to the first items in each sublist
-    i1 = low
-    i2 = middle + 1
-
-    # Interleave items from the sublists into the
-    # copyBuffer in such a way that order is preserved.
-    for i in range(low, high + 1):
-        if i1 > middle:
-            copyBuffer[i] = lyst[i2] # First sublist exhausted
-            i2 += 1
-        elif i2 > high:
-            copyBuffer[i] = lyst[i1] # Second sublist exhausted
-        elif lyst[i1] < lyst[i2]:
-            copyBuffer[i] = lyst[i1] # Item in first sublist <
-            i1 += 1
+    while f <= mid and l <= last:
+        if lyst[f] < lyst[l]:
+            tmp[a] = lyst[f]
+            f += 1
         else:
-            copyBuffer[i] = lyst[i2] # Item in second sublist <
-            i2 += 1
+            tmp[a] = lyst[l]
+            l += 1
+        a += 1
 
-    for i in range(low, high + 1):      # Copy sorted items back to
-        lyst[i] = copyBuffer[i]         # proper position in lyst
+    if f <= mid:
+        tmp[a:] = lyst[f:mid + 1]
+
+    if l <= last:
+        tmp[a:] = lyst[l:last + 1]
+
+    a = 0
+    while first <= last:
+        lyst[first] = tmp[a]
+        first += 1
+        a += 1
