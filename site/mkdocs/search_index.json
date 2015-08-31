@@ -1,0 +1,39 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "PyDSA: Python Data Structures \n Algorithms\n\n\nSimple data structures and algorithms implemented in Python 3.\n\n\nThese implementations are based off of those written by Ken Lambert in his book, \"Fundamental of Python: Data Structures.\"\nMost of them have been modified to an extent, and a couple may not be completely functional. There are also\n\"interfaces\" implemented to better utilize the heirarchial approach of object-orientation.\n\n\nHelp with Individual Data Structures or Algorithms\n\n\nTo get help with individual data structures, their methods, complexity analysis, etc. please use the docstrings. An example would be as follows:\n\n\nimport ArrayBag\n\nprint(help(ArrayBag))\n\n\n\n\nor\n\n\nimport ArrayBag\n\nprint(ArrayBag.__doc__)\n\n\n\n\nHeirarchy of Data Structures\n\n\nAbstractCollection\n|\n|----\nAbstractBag\n|         |\n|         |----\nArrayBag\n|         |       |\n|         |       |----\nArraySortedBag\n|         |       |         |\n|         |       |         |----\nArraySortedSet\n|         |       |\n|         |       |----\nArraySet\n|         |\n|         |----\nHashBag\n|         |        |\n|         |        |----\nHashSet\n|         |\n|         |----\nLinkedBag\n|         |        |\n|         |        |----\nLinkedSet\n|         |\n|         |----\nTreeSortedBag\n|                  |\n|                  |----\nTreeSortedSet\n|\n|----\nAbstractDict\n|         |\n|         |----\nArrayDict\n|         |        |\n|         |        |----\nArraySortedDict\n|         |\n|         |----\nHashDict\n|         |----\nLinkedDict\n|         |----\nTreeSortedDict\n|\n|----\nAbstractList\n|         |\n|         |----\nArraySortedList\n|         |        |\n|         |        |----\nArrayList\n|         |\n|         |----\nLinkedList\n|\n|----\nAbstractStack\n|         |\n|         |----\nArrayStack\n|         |----\nLinkedStack\n|\n|----\nArrayQueue\n|----\nLinkedQueue\n|         |\n|         |----\nLinkedPriorityQueue\n|\n|----\nArrayHeap\n|----\nHeapPriorityQueue\n|----\nLinkedBST\n|----\nLinkedDirectedGraph", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#pydsa-python-data-structures-algorithms", 
+            "text": "Simple data structures and algorithms implemented in Python 3.  These implementations are based off of those written by Ken Lambert in his book, \"Fundamental of Python: Data Structures.\"\nMost of them have been modified to an extent, and a couple may not be completely functional. There are also\n\"interfaces\" implemented to better utilize the heirarchial approach of object-orientation.", 
+            "title": "PyDSA: Python Data Structures &amp; Algorithms"
+        }, 
+        {
+            "location": "/#help-with-individual-data-structures-or-algorithms", 
+            "text": "To get help with individual data structures, their methods, complexity analysis, etc. please use the docstrings. An example would be as follows:  import ArrayBag\n\nprint(help(ArrayBag))  or  import ArrayBag\n\nprint(ArrayBag.__doc__)", 
+            "title": "Help with Individual Data Structures or Algorithms"
+        }, 
+        {
+            "location": "/#heirarchy-of-data-structures", 
+            "text": "AbstractCollection\n|\n|---- AbstractBag\n|         |\n|         |---- ArrayBag\n|         |       |\n|         |       |---- ArraySortedBag\n|         |       |         |\n|         |       |         |---- ArraySortedSet\n|         |       |\n|         |       |---- ArraySet\n|         |\n|         |---- HashBag\n|         |        |\n|         |        |---- HashSet\n|         |\n|         |---- LinkedBag\n|         |        |\n|         |        |---- LinkedSet\n|         |\n|         |---- TreeSortedBag\n|                  |\n|                  |---- TreeSortedSet\n|\n|---- AbstractDict\n|         |\n|         |---- ArrayDict\n|         |        |\n|         |        |---- ArraySortedDict\n|         |\n|         |---- HashDict\n|         |---- LinkedDict\n|         |---- TreeSortedDict\n|\n|---- AbstractList\n|         |\n|         |---- ArraySortedList\n|         |        |\n|         |        |---- ArrayList\n|         |\n|         |---- LinkedList\n|\n|---- AbstractStack\n|         |\n|         |---- ArrayStack\n|         |---- LinkedStack\n|\n|---- ArrayQueue\n|---- LinkedQueue\n|         |\n|         |---- LinkedPriorityQueue\n|\n|---- ArrayHeap\n|---- HeapPriorityQueue\n|---- LinkedBST\n|---- LinkedDirectedGraph", 
+            "title": "Heirarchy of Data Structures"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "About PyDSA\n\n\nI first became interested in data structures after my first year\nof college as a Computer Science student. From there I read\nKen Lambert's book, \"Fundamentals of Python: Data Structures.\"\nIn Ken's book, he provides myriad chunks of code--working code\nin many cases--but a full, rich Python package for data structures\nand algorithms was still nowhere near complete. So I set about\nmaking one of my own with the help of the snippets borrowed from\nKen's book.", 
+            "title": "About"
+        }, 
+        {
+            "location": "/about/#about-pydsa", 
+            "text": "I first became interested in data structures after my first year\nof college as a Computer Science student. From there I read\nKen Lambert's book, \"Fundamentals of Python: Data Structures.\"\nIn Ken's book, he provides myriad chunks of code--working code\nin many cases--but a full, rich Python package for data structures\nand algorithms was still nowhere near complete. So I set about\nmaking one of my own with the help of the snippets borrowed from\nKen's book.", 
+            "title": "About PyDSA"
+        }, 
+        {
+            "location": "/todo/", 
+            "text": "This page is blank for now since the project is at such\nan early point of development. After the ball gets rolling\nso-to-speak, I will add points of interest in what needs\ndeveloping.", 
+            "title": "ToDo"
+        }
+    ]
+}

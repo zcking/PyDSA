@@ -1,0 +1,7 @@
+site_name: PyDSA
+pages:
+  - Home: index.md
+  - About: about.md
+  - ToDo: todo.md
+
+theme: readthedocs
