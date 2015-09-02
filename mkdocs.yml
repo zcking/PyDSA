@@ -4,4 +4,4 @@ pages:
   - About: about.md
   - ToDo: todo.md
 
-theme: readthedocs
+theme: cosmo

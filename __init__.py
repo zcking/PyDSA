@@ -6,6 +6,7 @@ from arrays import Array
 from arrayset import ArraySet
 from arraysortedbag import ArraySortedBag
 from arraysortedlist import ArraySortedList
+from arraysortedset import ArraySortedSet
 from arraystack import ArrayStack
 from grid import Grid
 from linkedbag import LinkedBag
