@@ -1,6 +1,7 @@
 """
 File: linkedqueue.py
 Author: Zachary King
+Credit: Ken Lambert
 """
 
 from node import Node
